@@ -1,0 +1,102 @@
+.editor {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--surface);
+}
+
+.backBtn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+.backBtn:hover { background: var(--surface-hover); color: var(--text-primary); }
+
+.label {
+  flex: 1;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.saveBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 20px;
+  font-family: 'Lora', serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s, opacity 0.15s;
+}
+.saveBtn:hover:not(:disabled) { background: var(--accent-hover); }
+.saveBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.saveBtn.saved { background: #2E7D32; }
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem 1rem;
+  overflow-y: auto;
+  gap: 1rem;
+}
+
+.titleInput {
+  font-family: 'Lora', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  outline: none;
+  line-height: 1.3;
+  width: 100%;
+}
+.titleInput::placeholder { color: var(--text-muted); }
+
+.divider {
+  height: 1px;
+  background: var(--border-light);
+}
+
+.contentInput {
+  flex: 1;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  outline: none;
+  resize: none;
+  min-height: 320px;
+  width: 100%;
+}
+.contentInput::placeholder { color: var(--text-muted); }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 2.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,14 @@
+# Frontend
+Frontend/node_modules/
+Frontend/dist/
+
+# Backend
+Backend/target/
+Backend/.metadata/
+Backend/.settings/
+Backend/.classpath
+Backend/.project
+Backend/.factorypath
+
+# Docker
+*.env

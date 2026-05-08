@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:           #F5F0E8;
+  --surface:      #FDFAF4;
+  --surface-hover:#F0EBE0;
+  --border:       #D8D0C0;
+  --border-light: #EAE4D8;
+  --text-primary: #1C1A16;
+  --text-secondary:#6B6357;
+  --text-muted:   #A09585;
+  --accent:       #2D5A27;
+  --accent-hover: #234820;
+  --accent-light: #EAF2E8;
+  --danger:       #8B2E2E;
+  --shadow:       0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg:    0 8px 24px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
+  --radius:       10px;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+button { cursor: pointer; font-family: inherit; }
+input, textarea { font-family: inherit; }

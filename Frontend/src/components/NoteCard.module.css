@@ -1,0 +1,69 @@
+.card {
+  background: var(--card-bg, var(--surface));
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 120px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card.selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.3;
+  flex: 1;
+  word-break: break-word;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--text-muted);
+  padding: 0 2px;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.card:hover .deleteBtn { opacity: 1; }
+.deleteBtn:hover { color: var(--danger); }
+
+.preview {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+}
+.preview em { color: var(--text-muted); font-style: italic; }
+
+.date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-top: auto;
+}

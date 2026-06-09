@@ -1,20 +1,15 @@
 spring:
   datasource:
-    # In Docker, "mysql" = service name in docker-compose.yml
-    # For local dev, change "mysql" to "localhost"
-    url: jdbc:mysql://mysql:3306/notesdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: notesuser
-    password: notespass
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DATABASE_URL}
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      # "update" = create tables automatically if they don't exist
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
   port: 8080

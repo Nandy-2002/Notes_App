@@ -3,7 +3,7 @@ import axios from 'axios';
 // Vite proxies /api → http://localhost:8080 in dev (see vite.config.js)
 // In Docker, nginx proxies /api → backend container
 const API = axios.create({
-  baseURL: 'https://notes-backend-tw6m.onrender.com',
+  baseURL: 'https://notes-backend-tw6m.onrender.com/api/notes',
   headers: { 'Content-Type': 'application/json' },
 });
 
